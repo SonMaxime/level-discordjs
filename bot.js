@@ -11,7 +11,7 @@ bot.on('message', message => {
 var userData = JSON.parse(fs.readFileSync('jsonPointID/level.json', 'utf-8'));   
 var sender = message.author;
 var msg = message.content.toUpperCase();
-var prefix = '/'
+var prefix = '!'
  
  
 if(msg === prefix + 'niveau') {
