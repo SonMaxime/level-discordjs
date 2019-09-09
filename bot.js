@@ -15,8 +15,13 @@ var prefix = '/'
  
  
 if(msg === prefix + 'USERSTATS') {
-    message.channel.send('Vous avez envoyé **' + userData[sender.id].messagesSent + '** messages !' )
-}
+    message.channel.send({embed: {
+    const embed = new Discord.RichEmbed()
+  .setTitle("Vous avez envoyé **' + userData[sender.id].messagesSent + '** messages !")
+  .setColor(0x00AE86)
+  .setDescription("Niveau : En cours de dev/?")
+ 
+  message.channel.send({embed});
  
  
 if (!userData[sender.id]) userData[sender.id] = {
