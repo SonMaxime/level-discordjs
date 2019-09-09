@@ -14,7 +14,7 @@ var msg = message.content.toUpperCase();
 var prefix = '/'
  
  
-if(msg === prefix + 'level') {
+if(msg === prefix + 'niveau') {
     message.channel.send('Vous avez envoyé **' + userData[sender.id].messagesSent + '** messages !' )
 }
  
