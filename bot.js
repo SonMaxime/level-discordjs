@@ -33,4 +33,4 @@ fs.writeFile('jsonPointID/level.json', JSON.stringify(userData), (err) => {
  
 });
  
-bot.login('token');
+bot.login('NjExNDgzMTkwMTAzNjM4MDI5.XXZkFQ.jsLG5Bkq6VkrAG033qY9grdtZB0');
