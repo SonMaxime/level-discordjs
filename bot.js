@@ -14,7 +14,7 @@ var msg = message.content.toUpperCase();
 var prefix = '/'
  
  
-if(msg === prefix + 'USERSTATS') {
+if(msg === prefix + 'level') {
     message.channel.send({embed: {
     const embed = new Discord.RichEmbed()
   .setTitle("Vous avez envoyé **' + userData[sender.id].messagesSent + '** messages !")
