@@ -1,10 +1,9 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fs = require("fs");
-const embed = new Discord.RichEmbed();
  
 bot.on('ready', () => {
-  console.log(`Connecté en tant que ${bot.user.tag}!`);
+  console.log(`Logged in as ${bot.user.tag}!`);
 });
  
 bot.on('message', message => {
@@ -16,13 +15,8 @@ var prefix = '/'
  
  
 if(msg === prefix + 'level') {
-    message.channel.send({embed: {
-    const embed = new Discord.RichEmbed()
-  .setTitle("Vous avez envoyé **' + userData[sender.id].messagesSent + '** messages !")
-  .setColor(0x00AE86)
-  .setDescription("Niveau : En cours de dev/?")
- 
-  message.channel.send({embed});
+    message.channel.send('Vous avez envoyé **' + userData[sender.id].messagesSent + '** messages !' )
+}
  
  
 if (!userData[sender.id]) userData[sender.id] = {
