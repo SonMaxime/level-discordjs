@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fs = require("fs");
+const embed = new Discord.RichEmbed();
  
 bot.on('ready', () => {
   console.log(`Connecté en tant que ${bot.user.tag}!`);
