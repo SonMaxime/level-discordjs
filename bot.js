@@ -3,13 +3,12 @@ const bot = new Discord.Client();
 const fs = require("fs");
  
 bot.on('ready', () => {
-  console.log(`Logged in as ${bot.user.tag}!`);
+  console.log(`Connecté en tant que ${bot.user.tag}!`);
 });
  
 bot.on('message', message => {
  
- 
-var userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf-8'));
+var userData = JSON.parse(fs.readFileSync('jsonPointID/level.json', 'utf-8'));   
 var sender = message.author;
 var msg = message.content.toUpperCase();
 var prefix = '/'
@@ -26,7 +25,9 @@ if (!userData[sender.id]) userData[sender.id] = {
  
 userData[sender.id].messagesSent++;
  
-fs.writeFile('Storage/userData.json', JSON.stringify(userData), (err) => {
+ 
+ 
+fs.writeFile('jsonPointID/level.json', JSON.stringify(userData), (err) => {
     if (err) console.error(err);
 });
  
