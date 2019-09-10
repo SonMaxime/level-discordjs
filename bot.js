@@ -23,7 +23,6 @@ client.on('message', async message => {
     message.reply(`You just leveled up!! You are now level: ${profile.level + 1}`)
   }
  
-  //If the message does not start with your prefix return.
   if (!message.content.startsWith(settings.prefix)) return;
  
   if (command === 'profile') {
