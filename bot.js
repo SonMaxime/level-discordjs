@@ -11,16 +11,12 @@ client.on('message', async message => {
  
   var command = message.content.toLowerCase().slice(settings.prefix.length).split(' ')[0];
  
-  //These are the arguments behind the commands.
   var args = message.content.split(' ').slice(1);
  
-  //If the user that types a message is a bot account return.
   if (message.author.bot) return;
  
-  //When someone sends a message add xp
   var profile = await leveling.Fetch(message.author.id)
   leveling.AddXp(message.author.id, 10)
-  //If user xp higher than 100 add level
   if (profile.xp + 10 > 100) {
     await leveling.AddLevel(message.author.id, 1)
     await leveling.SetXp(message.author.id, 0)
