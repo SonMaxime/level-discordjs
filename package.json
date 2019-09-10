@@ -1,0 +1,26 @@
+{
+  "name": "level-discordjs",
+  "version": "1.0.0",
+  "description": "Level",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "/profil"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SonMaxime/level-discordjs.git"
+  },
+  "keywords": [
+    "discordjs"
+  ],
+  "author": "SonMaximd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SonMaxime/level-discordjs/issues"
+  },
+  "homepage": "https://github.com/SonMaxime/level-discordjs#readme"
+}
