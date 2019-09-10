@@ -3,9 +3,21 @@ const leveling = require('./app.js');
 const client = new Discord.Client();
 
 const settings = {
-  prefix: ';',
-  token: 'YOUR TOKEN'
+  prefix: '/',
+  token: 'NjExNDgzMTkwMTAzNjM4MDI5.XXe2HQ.0zD7ZhCXQQ4sHmt7cuTx7wG5Kpg'
 }
+
+client.on('ready', () => {
+console.log('Bot: Hosting ' + `${client.users.size}` + ' utilisateurs, dans ' + `${client.channels.size} ` + ' channels et ' + `${client.guilds.size}` + ' serveurs.');
+    client.user.setStatus('do not disturb')
+    client.user.setPresence({
+        game: {
+            name: '/profil | by SonMaxime',
+            type: "STREAMING",
+            imageUrl: "https://www.heroku.com/"
+        }
+    });
+});
 
 client.on('message', async message => {
  
@@ -25,7 +37,7 @@ client.on('message', async message => {
  
   if (!message.content.startsWith(settings.prefix)) return;
  
-  if (command === 'profile') {
+  if (command === 'profil') {
  
     var user = message.mentions.users.first() || message.author
  
