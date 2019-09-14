@@ -1,12 +1,20 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
 const fs = require("fs");
  
-bot.on('ready', () => {
-  console.log(`Logged in as ${bot.user.tag}!`);
+client.on('ready', () => {
+console.log('Bot: Hosting ' + `${client.users.size}` + ' utilisateurs, dans ' + `${client.channels.size}` + ' et ' + `${client.guilds.size}` + ' guildes.');
+    client.user.setStatus('do not disturb')
+    client.user.setPresence({
+        game: {
+            name: '/meme | by SonMaxime',
+            type: "STREAMING",
+            imageUrl: "https://www.heroku.com/"
+        }
+    });
 });
  
-bot.on('message', message => {
+client.on('message', message => {
  
 var userData = JSON.parse(fs.readFileSync('jsonPointID/level.json', 'utf-8'));   
 var sender = message.author;
@@ -33,4 +41,4 @@ fs.writeFile('jsonPointID/level.json', JSON.stringify(userData), (err) => {
  
 });
  
-bot.login('token');
+client.login('NjExNDgzMTkwMTAzNjM4MDI5.XX0IHg.fPQadbpzcim3tnScCzBcDvw8Zk8');
