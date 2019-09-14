@@ -11,10 +11,10 @@ bot.on('message', message => {
 var userData = JSON.parse(fs.readFileSync('jsonPointID/level.json', 'utf-8'));   
 var sender = message.author;
 var msg = message.content.toUpperCase();
-var prefix = '>'
+var prefix = '/'
  
  
-if(msg === prefix + 'USERSTATS') {
+if(msg === prefix + 'level') {
     message.channel.send('Vous avez envoyé **' + userData[sender.id].messagesSent + '** messages !' )
 }
  
